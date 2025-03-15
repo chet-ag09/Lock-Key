@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keylog Viewer</title>
+    <title>Lock and Key - Keylog Viewer</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
-        h1 { color: #333; }
-        pre { background: white; padding: 10px; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; }
+        body { font-family: Arial, sans-serif; margin: 20px; background: #101010; color: aliceblue;}
+        h1 { color: #dcdcdc; }
+        pre { background: rgb(48, 48, 48); padding: 10px; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; }
     </style>
     <script>
         function fetchKeylog() {
@@ -19,7 +19,7 @@
                 .catch(error => console.error('Error fetching keylog:', error));
         }
 
-        setInterval(fetchKeylog, 2000);  // Refresh every 2 seconds
+        setInterval(fetchKeylog, 5000);  // Refresh every 5 seconds
         window.onload = fetchKeylog;  // Load immediately on page load
     </script>
 </head>

