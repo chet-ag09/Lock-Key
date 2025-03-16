@@ -6,7 +6,7 @@ text = ""
 last_sent_text = "" 
 HOST = "127.0.0.1" #ENTER SERVER IP
 PORT = "5000" #ENTER PORT
-update_time = 10 
+update_time = 3 
 
 def send_post_req():
     global text, last_sent_text

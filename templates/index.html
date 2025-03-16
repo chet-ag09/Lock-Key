@@ -19,7 +19,7 @@
                 .catch(error => console.error('Error fetching keylog:', error));
         }
 
-        setInterval(fetchKeylog, 5000);  // Refresh every 5 seconds
+        setInterval(fetchKeylog, 1000);  // Refresh every second
         window.onload = fetchKeylog;  // Load immediately on page load
     </script>
 </head>
